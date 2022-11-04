@@ -1,31 +1,28 @@
-egyenleg = 0
 
-def befizetés(egyenleg):
+
+def befizetés(feltoltott):
+    egyenleg = 0
+    osszeg = 0
     
-    ujegyenleg = 0
-    print(f'Elkölthető összeg : {egyenleg} ft' )
-    feltoltott = int(input('feltölteni kivánt összeg : '))
-    if  feltoltott < 0 :
-        print('érvénytelen összeg !!')
-        
-    else:
-        osszeg = egyenleg + ujegyenleg
+    
+    
+    osszeg = feltoltott + egyenleg
     
     return osszeg
     
         
-# def kifizetés(egyenleg):
+def kifizetés(osszeg):
     
-#     print(f'Elkölthető összeg : {egyenleg} ft' )
-#     if egyenleg == 0:
-#         print('Önnek nincs pénz az egyenlegén , sajnos nem tud mit kivenni .')
-#     elif egyenleg > 0:
-#         kifizetett = int(input('Mennyit szeretne kivenni  : ')) 
-#         if kifizetett > 0:
-#             egyenleg = egyenleg - kifizetett
-#             print(f'az ön új egyenlege : {egyenleg} ft')
-#         else: 
-#             print('ön érvénytelen összeget adott meg !')
-#     return egyenleg
+    
+    if osszeg == 0:
+        print('Önnek nincs pénz az egyenlegén , sajnos nem tud mit kivenni .')
+    elif osszeg > 0:
+        kifizetett = int(input('Mennyit szeretne kivenni  : ')) 
+        if kifizetett > 0:
+            osszeg = osszeg - kifizetett
+            print(f'az ön új egyenlege : {osszeg} ft')
+        else: 
+            print('ön érvénytelen összeget adott meg !')
+    return osszeg
     
     
