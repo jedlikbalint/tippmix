@@ -7,7 +7,7 @@ def menu():
         print('0 - kilépés')
         print('1 - befizetés')
         print('2 - kifizetés')
-        print('3 - mai meccsek')
+        print('3 - fogadás')
         print('4 - fogadásaim')
         
         option =  int(input('Válosszon a fentiek közül : '))
