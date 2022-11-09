@@ -26,3 +26,22 @@ def kifizetés(osszeg):
     return osszeg
     
     
+    
+    
+def foci(footballresults):
+    print('1 - meccs keresése')
+    print('2 - a nap fogadása')
+    print('3 - biztos mix')
+    print('4 - magas oddsok')
+    valasztas = input('adja meg a választott funkció számát :')
+    if valasztas == 1:
+        print('1 - keresés csapat alapján')
+        print('2 - keresés időpont alapján')
+        valasz = input('adja meg a választott funkció számát :')
+        if valasz == 1:
+            csapatnev = input('adja meg a csapat nevét:')
+            
+        elif valasz == 2:
+            idopont = input('adja meg a mérközés időpontját :')
+    
+    

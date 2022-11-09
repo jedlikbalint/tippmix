@@ -1,10 +1,10 @@
 from menu import*
 from fuggvenyek import*
-
+from fileHandling import*
 
 
 print(' Üdvözlünk')
-
+footballresults = loadData()
 
 
 
