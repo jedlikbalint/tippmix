@@ -1,27 +1,29 @@
-from footballResult import*
+data = []
+
+def olvasas():
+    file = open('meccsek.csv', 'r' , encoding='utf8')
+    
+    elsosor = file.readline()
+    # masodik = file.readline()
+    
+    
+    
+    print(elsosor)
+    
+    
+    
+    for row in file:
+        data.append(row.strip())
+    
+    
+    
+    
+    # print(masodik)
+    
+    file.close()
+    
 
 
-def loadData():
-    
-    footballResults = []
-    f = open('meccsek.csv', 'r', encoding='utf8')
-    
-    f.readline()
-    
-    for row in f:
-        
-        splitted = row.split(';')
-        
-        
-        res = footballResults()
-        res.idopont = splitted[0]
-        res.hazai = splitted[1]
-        res.vendeg = splitted[2]
-        
-    
-        footballResults.append(res)
-    
-    f.close
-    
-    return footballResults
+
+
 
