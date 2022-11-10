@@ -1,11 +1,53 @@
 from menu import*
 from fuggvenyek import*
 from fileHandling import*
-
+import hashlib
 
 print(' Üdvözlünk')
 
 
+def signup(): 
+    email = input("Adja meg az e-mail címet: ") 
+    pwd = input("Adja meg a jelszót: ") 
+    conf_pwd = input("Jelszó megerősítése: ")
+    if conf_pwd == pwd: 
+        enc = conf_pwd.encode() 
+        hash1 = hashlib.md5(enc).hexdigest()
+        with open('nevek.txt', 'w') as f: 
+             f.write(email + '\n') 
+             f.write(hash1) 
+        f.close() 
+        print('Sikeres regisztráció!')
+    else: 
+        print ("A jelszó nem ugyanaz, mint fent! \n")
+def login(): 
+    email = input("Adja meg az e-mail címet: ") 
+    pwd = input("Adja meg a jelszót: ") 
+    conf_pwd = input("Jelszó megerősítése: ")
+    if conf_pwd == pwd: 
+        enc = conf_pwd.encode() 
+        auth_hash = hashlib.md5(enc).hexdigest()
+        with open('nevek.txt', 'w') as f:  
+            stored_email, stored_pwd = f.read().split("\n" ) 
+    f.close()
+    if email == stored_email and auth_hash == stored_pwd: 
+         print("Sikeresen bejelentkezett!") 
+    else: 
+         print("A bejelentkezés sikertelen! \n")
+while 1: 
+    print("********** Bejelentkezési rendszer **********") 
+    print("1.Regisztráció") 
+    print("2.Bejelentkezés") 
+    print("3 .Kilép !")
+    ch = int(input("Enter your choice: "))
+    if ch == 1:
+        signup()
+    elif ch == 2:
+        login()
+    elif ch == 3:
+        break
+    else:
+        print("Wrong Choice!")
 
 
     
