@@ -3,7 +3,7 @@ from footballResult import*
 
 def loadData():
     
-    footballresults = []
+    footballResults = []
     f = open('meccsek.csv', 'r', encoding='utf8')
     
     f.readline()
@@ -13,15 +13,15 @@ def loadData():
         splitted = row.split(';')
         
         
-        res = footballResult()
+        res = footballResults()
         res.idopont = splitted[0]
         res.hazai = splitted[1]
         res.vendeg = splitted[2]
         
     
-        footballresults.append(res)
+        footballResults.append(res)
     
     f.close
     
-    return footballresults
+    return footballResults
 
