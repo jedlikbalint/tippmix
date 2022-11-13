@@ -44,35 +44,32 @@ def foci():
     if valertek == '1':
         print('1 - keresés csapat alapján')
         print('2 - keresés időpont alapján')
-        valasztottertek = input('adja meg a választott funkció számát :')
-        if valasztottertek == '1':
-            meccskereses(valasztottertek)
+        valasztottertek = int(input('adja meg a választott funkció számát :'))
+        if valasztottertek == 1:
+            meccskeresescsapat()
     else : 
         pass
         
         
 
 
-def meccskereses(valasztottertek):
-    print('1 - keresés csapat alapján')
-    print('2 - keresés időpont alapján')
-    valasztottertek = int(input('adja meg a választott funkció számát :'))
-    if valasztottertek == 1:
+def meccskeresescsapat():
+    
         csapatnev = input('adja meg a csapat nevét:')
         
         for row in data:
             splittedData = row.split(';')
-            if csapatnev  in splittedData[1]:
+            if csapatnev  == splittedData[1]:
                 print(row)
         print('nincs ilyen nevű csapat')
         
             
        
-    elif valasztottertek == 2:
-        idopont = input('adja meg a mérközés időpontját :')
-        if idopont not in data:
-            print('nincs ilyen idopont')
-        else:
-           for row in data:
-                print(row)
+    # elif valasztottertek == 2:
+    #     idopont = input('adja meg a mérközés időpontját :')
+    #     if idopont not in data:
+    #         print('nincs ilyen idopont')
+    #     else:
+    #        for row in data:
+    #             print(row)
     
