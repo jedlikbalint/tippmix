@@ -3,6 +3,9 @@ from fuggvenyek import*
 from fileHandling import*
 import hashlib
 
+
+
+
 print(' Üdvözlünk')
 
 
