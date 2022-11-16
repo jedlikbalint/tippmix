@@ -11,6 +11,7 @@ def olvasas():
     
     
     file.close()
+    return data
     
 
 
@@ -38,5 +39,4 @@ def login (email, pwd):
     
     
     file.close()
-
 

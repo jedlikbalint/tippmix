@@ -46,22 +46,20 @@ def foci():
         print('2 - keresés időpont alapján')
         valasztottertek = int(input('adja meg a választott funkció számát :'))
         if valasztottertek == 1:
-            meccskeresescsapat()
+            csapatnev = input('adja meg a csapat nevét:')
+            for row in data:
+                darabolt = row.split(';')
+        
+            if darabolt[1] == csapatnev:
+                print('van ilyen nevű')  
+            else : print(f'{csapatnev}-  nincs a listában ')
     else : 
         pass
         
-        
-
-
-def meccskeresescsapat():
+       
     
-        csapatnev = input('adja meg a csapat nevét:')
-        
-        for row in data:
-            splittedData = row.split(';')
-            if csapatnev  == splittedData[1]:
-                print(row)
-        print('nincs ilyen nevű csapat')
+
+
         
             
        
