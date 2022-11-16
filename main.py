@@ -70,7 +70,6 @@ while 1:
         reg()
     elif ch == 2:
         bejel()
-    
     else:
         print("Rossz érték !")
 
