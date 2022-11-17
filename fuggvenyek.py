@@ -27,15 +27,38 @@ def kifizetés(osszeg):
     
   
   
-olvasas()
-
+osszesadat = olvasas()
 
 
 
 
 
     
-def foci():
+def foci(osszesadat):
+    
+
+    print('1 - meccs keresése')
+    print('2 - a nap fogadása')
+    print('3 - biztos mix')
+    print('4 - magas oddsok')
+    valertek = input('adja meg a  :')
+    if valertek == '1':
+        print('1 - keresés csapat alapján')
+        print('2 - keresés időpont alapján')
+        valasztottertek = int(input('adja meg a választott funkció számát :'))
+        if valasztottertek == 1:
+            csapatnev = input('adja meg a csapat nevét:')
+            
+                
+            if csapatnev == osszesadat[1]:
+                print('van ilyen nevű')  
+            else : print(f'{csapatnev}-  nincs a listában ')
+    else : 
+        pass
+        
+       
+    
+def kosar():
     print('1 - meccs keresése')
     print('2 - a nap fogadása')
     print('3 - biztos mix')
@@ -49,19 +72,33 @@ def foci():
             csapatnev = input('adja meg a csapat nevét:')
             for row in data:
                 darabolt = row.split(';')
-        
             if darabolt[1] == csapatnev:
                 print('van ilyen nevű')  
             else : print(f'{csapatnev}-  nincs a listában ')
     else : 
         pass
-        
-       
+    
+def vizilabda():
+    print('1 - meccs keresése')
+    print('2 - a nap fogadása')
+    print('3 - biztos mix')
+    print('4 - magas oddsok')
+    valertek = input('adja meg a  :')
+    if valertek == '1':
+        print('1 - keresés csapat alapján')
+        print('2 - keresés időpont alapján')
+        valasztottertek = int(input('adja meg a választott funkció számát :'))
+        if valasztottertek == 1:
+            csapatnev = input('adja meg a csapat nevét:')
+            if osszesadat[1] == csapatnev:
+                print('van ilyen nevű')  
+            else : print(f'{csapatnev}-  nincs a listában ')
+    else : 
+        pass
     
 
-
         
-            
+
        
     # elif valasztottertek == 2:
     #     idopont = input('adja meg a mérközés időpontját :')

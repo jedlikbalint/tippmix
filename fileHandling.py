@@ -1,18 +1,8 @@
-data = []
+from Eredmenyek import Eredmenyek
 neveklist = []
 
-def olvasas():
-    file = open('meccsek.csv', 'r' , encoding='utf8')
-    elsosor = file.readline()
 
-    
-    for row in file:
-        data.append(row.strip())
-    
-    
-    file.close()
-    return data
-    
+
 
 
 def signup (email, pwd):
@@ -39,4 +29,28 @@ def login (email, pwd):
     
     
     file.close()
+
+
+
+
+def olvasas():
+    file = open('meccsek.csv', 'r' , encoding='utf8')
+    results = []
+    
+    
+    file.readline()
+    
+    for row in file:
+        e = Eredmenyek()
+        splitted = row.strip().split(';')
+        e.evszam = str(splitted[0])
+        e.hazai = str(splitted[1])
+        e.vendeg = str(splitted[2])
+        
+        results.append(e)
+        
+    file.close()
+    return results
+    
+
 

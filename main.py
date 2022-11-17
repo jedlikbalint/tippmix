@@ -1,9 +1,9 @@
 from menu import*
 from fuggvenyek import*
 from fileHandling import*
-import hashlib
 
 
+osszesadat = olvasas()
 
 
 print(' Üdvözlünk')
@@ -52,7 +52,7 @@ def bejel():
                     print('4 - Kosárlabda')
                     sportag = input('A választott sportág száma :')
                     if sportag == '1':
-                        foci()
+                        foci(osszesadat)
                     elif sportag == '2':
                         pass
                     elif sportag == '3':
@@ -100,7 +100,7 @@ while choice != 0:
             print('4 - Kosárlabda')
             sportag = input('A választott sportág száma :')
             if sportag == '1':
-                foci()
+                foci(osszesadat)
             elif sportag == '2':
                 pass
             elif sportag == '3':
@@ -118,3 +118,4 @@ while choice != 0:
     #     nev = input('Add meg melyik nevet kell modosítani  : ')
     #     ujnev = input('Add meg mire  : ')
     #     modosit(nev, ujnev)
+    
