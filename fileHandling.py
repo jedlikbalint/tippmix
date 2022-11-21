@@ -1,18 +1,32 @@
-data = []
+from Result import Result
+
+
 neveklist = []
 
 def olvasas():
+    results = []
     file = open('meccsek.csv', 'r' , encoding='utf8')
     elsosor = file.readline()
 
-    
     for row in file:
-        data.append(row.strip())
+        
+        splitted = row.split(';')
+        
+        
+        res = Result()
+        res.date = splitted[0]
+        res.hazai = splitted[1]
+        res.vendeg = splitted[2]
+        
+        results.append(res)
+    
+    
     
     
     file.close()
-    return data
+    return results
     
+
 
 
 def signup (email, pwd):

@@ -1,5 +1,7 @@
 from fileHandling import*
 
+results = olvasas()
+
 def befizetés(feltoltott):
     egyenleg = 0
     osszeg = 0
@@ -26,14 +28,17 @@ def kifizetés(osszeg):
     return osszeg
     
   
+
+
+
+
+def searchByName2(results, csapatnev):
   
-olvasas()
-
-
-
-
-
-
+    for item in results:
+        if item.hazai or item.vendeg == csapatnev: 
+            print(f'{item.date} - {item.hazai} - {item.vendeg}')
+      
+            
     
 def foci():
     print('1 - meccs keresése')
@@ -47,12 +52,12 @@ def foci():
         valasztottertek = int(input('adja meg a választott funkció számát :'))
         if valasztottertek == 1:
             csapatnev = input('adja meg a csapat nevét:')
-            for row in data:
-                darabolt = row.split(';')
-        
-            if darabolt[1] == csapatnev:
-                print('van ilyen nevű')  
-            else : print(f'{csapatnev}-  nincs a listában ')
+            searchByName2(results, csapatnev)
+            print('tippeljen ')
+            print('1 - hazai')
+            print('2 - vendeg')
+            print('x - döntetlen')
+            tipp = input('választott kimenet :')
     else : 
         pass
         

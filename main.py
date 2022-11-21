@@ -1,11 +1,11 @@
 from menu import*
 from fuggvenyek import*
 from fileHandling import*
-import hashlib
 
 
 
 
+results = olvasas()
 print(' Üdvözlünk')
 
 
