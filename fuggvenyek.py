@@ -1,5 +1,8 @@
 from fileHandling import*
 
+from fogadas import fogadas
+
+
 results = olvasas()
 
 def befizetés(feltoltott):
@@ -29,18 +32,28 @@ def kifizetés(osszeg):
     
   
 
+def searchByName(results, csapatnev):
+    for item in results:
+        if item.hazai == csapatnev or item.vendeg == csapatnev: 
+            print(f'{item.date} - {item.hazai} - {item.vendeg}')
 
 
-
-def searchByName2(results, csapatnev):
+def searchByName2(results, csapatnev, tipp):
   
     for item in results:
-        if item.hazai or item.vendeg == csapatnev: 
+        if item.hazai == csapatnev or item.vendeg == csapatnev: 
             print(f'{item.date} - {item.hazai} - {item.vendeg}')
+            file = open('fogadásaim.csv','a',encoding='utf8')
+            file.write( tipp + ';' + item.date + ';' + item. hazai + ';' + item.vendeg + '\n')
+            file.close() 
+            return
+        else : 
+            print('nincs ilyen csapat')
       
-            
+
+
     
-def foci():
+def foci(osszesadat):
     print('1 - meccs keresése')
     print('2 - a nap fogadása')
     print('3 - biztos mix')
@@ -52,18 +65,26 @@ def foci():
         valasztottertek = int(input('adja meg a választott funkció számát :'))
         if valasztottertek == 1:
             csapatnev = input('adja meg a csapat nevét:')
-            searchByName2(results, csapatnev)
+            searchByName(results, csapatnev)
             print('tippeljen ')
             print('1 - hazai')
             print('2 - vendeg')
             print('x - döntetlen')
             tipp = input('választott kimenet :')
+            searchByName2(results, csapatnev, tipp)
+            
+            
     else : 
         pass
+
         
        
     
+# def saveResult(tipp, name):
+#     file = open('fogadásaim.csv','a',encoding='utf8')
+#     file.write(f'{tipp};{name} \n')
 
+#     file.close()
 
         
             
