@@ -54,3 +54,6 @@ def login (email, pwd):
     
     file.close()
 
+def saveResult(res):
+    file = open('fogadásaim.csv','a',encoding='utf8')
+    file.write(f'{res.date};{res.hazai};{res.vendeg}')
