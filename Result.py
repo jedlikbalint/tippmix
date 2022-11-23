@@ -3,4 +3,6 @@ class Result:
     date = ''
     hazai = ''
     vendeg = ''
+    odds1 = ''
+    odds2 = ''
     

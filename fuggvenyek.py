@@ -38,13 +38,15 @@ def searchByName(results, csapatnev):
             print(f'{item.date} - {item.hazai} - {item.vendeg}')
 
 
-def searchByName2(results, csapatnev, tipp):
+
+
+def searchByName2(results, csapatnev, tipp, email):
   
     for item in results:
         if item.hazai == csapatnev or item.vendeg == csapatnev: 
             print(f'{item.date} - {item.hazai} - {item.vendeg}')
             file = open('fogadásaim.csv','a',encoding='utf8')
-            file.write( tipp + ';' + item.date + ';' + item. hazai + ';' + item.vendeg + '\n')
+            file.write( tipp + ';' + item.date + ';' + item. hazai + ';' + item.vendeg + ';' + email + '\n')
             file.close() 
             return
         else : 
@@ -52,17 +54,24 @@ def searchByName2(results, csapatnev, tipp):
       
 
 
+def minOdds():
+    for item in results:
+        if float(item.odds1) < 1.3 or float(item.odds2) < 1.3 :
+            print(f'{item.date} - {item.hazai} - {item.vendeg} - {item.odds1} - {item.odds2}')
+
     
-def foci(osszesadat):
+def foci(osszesadat, email):
     print('1 - meccs keresése')
     print('2 - a nap fogadása')
     print('3 - biztos mix')
     print('4 - magas oddsok')
     valertek = input('adja meg a  :')
+    print('----------------------------------------')
     if valertek == '1':
         print('1 - keresés csapat alapján')
         print('2 - keresés időpont alapján')
         valasztottertek = int(input('adja meg a választott funkció számát :'))
+        print('--------------------------------------------')
         if valasztottertek == 1:
             csapatnev = input('adja meg a csapat nevét:')
             searchByName(results, csapatnev)
@@ -71,7 +80,10 @@ def foci(osszesadat):
             print('2 - vendeg')
             print('x - döntetlen')
             tipp = input('választott kimenet :')
-            searchByName2(results, csapatnev, tipp)
+            print('----------------------------------------------')
+            searchByName2(results, csapatnev, tipp, email)
+        elif valertek == '3':   
+            print(minOdds())
             
             
     else : 

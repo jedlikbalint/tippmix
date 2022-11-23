@@ -34,7 +34,7 @@ def bejel():
         choice = -1
         while choice != 0:
             choice = menu()
-            print('----------------------------')
+            print('--------------------------------------------------')
             if choice == 1:
                 feltoltott = int(input('feltölteni kivánt összeg : '))
                 print(f'Elkölthető összeg : {befizetés(feltoltott)} ft' )
@@ -45,6 +45,7 @@ def bejel():
                 print('A - mai meccsek')
                 print('B - szelvény ajánló')
                 valasztas = input('Kérem válasszon egy opciót ( A vagy B )').upper()
+                print('------------------------------------------------------')
                 if valasztas == 'A':
                     print('Válasszon sportágat :')
                     print('1 - Labdarugás')
@@ -52,8 +53,9 @@ def bejel():
                     print('3 - vizilabda')
                     print('4 - Kosárlabda')
                     sportag = input('A választott sportág száma :')
+                    print('-----------------------------------------')
                     if sportag == '1':
-                        foci(osszesadat)
+                        foci(osszesadat, email)
                     elif sportag == '2':
                         pass
                     elif sportag == '3':
