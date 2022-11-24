@@ -58,7 +58,7 @@ def bejel():
                     sportag = input('A választott sportág száma :')
                     print('-----------------------------------------')
                     if sportag == '1':
-                        foci(osszesadat, email)
+                        foci(osszesadat)
                     elif sportag == '2':
                         pass
                     elif sportag == '3':
@@ -69,7 +69,7 @@ def bejel():
                     pass
                 
             elif choice == 4 :
-                fogadasaimListaz(fogadat)
+                print(loadData())
     else:
          print('Sikertelen bejelentkezés ! \n')
 while 1: 

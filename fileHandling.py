@@ -36,13 +36,10 @@ def olvasas():
 def loadData():
     fogadasok = []
     file = open('fogadásaim.csv', 'r' , encoding='utf8')
-  
-
-    for row in file:
-        
+    for row in file :
+   
         splitted = row.split(';')
-        
-        
+    
         fog = maifogadas()
         fog.kimenet = splitted[0]
         fog.datum = splitted[1]

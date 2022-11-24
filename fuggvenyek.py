@@ -4,7 +4,7 @@ from fogadas import fogadas
 
 
 results = olvasas()
-fogadat = loadData()
+
 
 def befizetés(feltoltott):
     egyenleg = 0
@@ -53,8 +53,7 @@ def searchByName2(results, csapatnev, tipp):
         else : 
             print('nincs ilyen csapat')
       
-def fogadasaimListaz(fogadat):
-    print(fogadat) 
+
     
 
 def minOdds(results):
