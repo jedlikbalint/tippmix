@@ -47,7 +47,7 @@ def searchByName2(results, csapatnev, tipp):
         if item.hazai == csapatnev or item.vendeg == csapatnev: 
             print(f'{item.date} - {item.hazai} - {item.vendeg}')
             file = open('fogadásaim.csv','a',encoding='utf8')
-            file.write( tipp + ';' + item.date + ';' + item. hazai + ';' + item.vendeg + '\n')
+            file.write( tipp + ';' + item.date + ';' + item. hazai + ';' + item.vendeg + ';' + item.odds1 + ';' + item.odds2 + '\n')
             file.close() 
             return
         else : 
@@ -68,7 +68,7 @@ def maxOdds(results):
             print(f'{item.date} - {item.hazai} - {item.vendeg} - {item.odds1} - {item.odds2}')
 
     
-def foci(osszesadat, email):
+def foci(osszesadat):
     print('1 - meccs keresése')
     print('2 - a nap fogadása')
     print('3 - biztos mix')
@@ -89,11 +89,23 @@ def foci(osszesadat, email):
             print('x - döntetlen')
             tipp = input('választott kimenet :')
             print('----------------------------------------------')
-            searchByName2(results, csapatnev, tipp, email)
+            searchByName2(results, csapatnev, tipp)
     elif valertek == '3':   
             minOdds(results)
+            print('tippeljen ')
+            print('1 - hazai')
+            print('2 - vendeg')
+            print('x - döntetlen')
+            tipp = input('választott kimenet :')
+            searchByName2(results, csapatnev, tipp)
     elif valertek == '4':
-        maxOdds(results)       
+        maxOdds(results)
+        print('tippeljen ')
+        print('1 - hazai')
+        print('2 - vendeg')
+        print('x - döntetlen')
+        tipp = input('választott kimenet :')  
+        searchByName2(results, csapatnev, tipp)    
             
     else : 
         print('rossz értéket adott meg !!!')

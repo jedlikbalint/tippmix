@@ -35,7 +35,7 @@ def olvasas():
 
 def loadData():
     fogadasok = []
-    file = open('fogadas.csv', 'r' , encoding='utf8')
+    file = open('fogadásaim.csv', 'r' , encoding='utf8')
   
 
     for row in file:
@@ -43,20 +43,21 @@ def loadData():
         splitted = row.split(';')
         
         
-        res = maifogadas()
-        res.kimenet = splitted[0]
-        res.hazai = splitted[1]
-        res.vendeg = splitted[2]
-        res.odds1 = splitted[3]
-        res.odds2 = splitted[4]
+        fog = maifogadas()
+        fog.kimenet = splitted[0]
+        fog.datum = splitted[1]
+        fog.hazai = splitted[2]
+        fog.vendeg = splitted[3]
+        fog.odds1 = splitted[4]
+        fog.odds2 = splitted[5]
         
-        results.append(res)
+        fogadasok.append(fog)
     
     
     
     
     file.close()
-    return results
+    return fogadasok
     
 
 def signup (email, pwd):

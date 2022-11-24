@@ -5,7 +5,7 @@ from fileHandling import*
 
 osszesadat = olvasas()
 
-
+fogadat = loadData()
 results = olvasas()
 print(' Üdvözlünk')
 
@@ -64,9 +64,12 @@ def bejel():
                     elif sportag == '3':
                         pass
                     elif sportag == '4':
-                        fogadasaimListaz()
+                        pass
                 elif valasztas == 'B':
                     pass
+                
+            elif choice == 4 :
+                fogadasaimListaz(fogadat)
     else:
          print('Sikertelen bejelentkezés ! \n')
 while 1: 
