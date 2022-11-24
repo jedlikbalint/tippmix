@@ -4,6 +4,7 @@ from fogadas import fogadas
 
 
 results = olvasas()
+fogadat = loadData()
 
 def befizetés(feltoltott):
     egyenleg = 0
@@ -40,23 +41,30 @@ def searchByName(results, csapatnev):
 
 
 
-def searchByName2(results, csapatnev, tipp, email):
+def searchByName2(results, csapatnev, tipp):
   
     for item in results:
         if item.hazai == csapatnev or item.vendeg == csapatnev: 
             print(f'{item.date} - {item.hazai} - {item.vendeg}')
             file = open('fogadásaim.csv','a',encoding='utf8')
-            file.write( tipp + ';' + item.date + ';' + item. hazai + ';' + item.vendeg + ';' + email + '\n')
+            file.write( tipp + ';' + item.date + ';' + item. hazai + ';' + item.vendeg + '\n')
             file.close() 
             return
         else : 
             print('nincs ilyen csapat')
       
+def fogadasaimListaz(fogadat):
+    print(fogadat) 
+    
 
-
-def minOdds():
+def minOdds(results):
     for item in results:
         if float(item.odds1) < 1.3 or float(item.odds2) < 1.3 :
+            print(f'{item.date} - {item.hazai} - {item.vendeg} - {item.odds1} - {item.odds2}')
+            
+def maxOdds(results):
+    for item in results:
+        if float(item.odds1) > 3 or float(item.odds2) > 3 :
             print(f'{item.date} - {item.hazai} - {item.vendeg} - {item.odds1} - {item.odds2}')
 
     
@@ -82,12 +90,13 @@ def foci(osszesadat, email):
             tipp = input('választott kimenet :')
             print('----------------------------------------------')
             searchByName2(results, csapatnev, tipp, email)
-        elif valertek == '3':   
-            print(minOdds())
-            
+    elif valertek == '3':   
+            minOdds(results)
+    elif valertek == '4':
+        maxOdds(results)       
             
     else : 
-        pass
+        print('rossz értéket adott meg !!!')
 
         
        

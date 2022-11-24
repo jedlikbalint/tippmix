@@ -35,6 +35,9 @@ def bejel():
         while choice != 0:
             choice = menu()
             print('--------------------------------------------------')
+            if choice == 0:
+                file = open('fogadásaim.csv','w',encoding='utf8')
+                file.close()
             if choice == 1:
                 feltoltott = int(input('feltölteni kivánt összeg : '))
                 print(f'Elkölthető összeg : {befizetés(feltoltott)} ft' )
@@ -61,7 +64,7 @@ def bejel():
                     elif sportag == '3':
                         pass
                     elif sportag == '4':
-                        pass
+                        fogadasaimListaz()
                 elif valasztas == 'B':
                     pass
     else:
@@ -85,6 +88,7 @@ choice = -1
 while choice != 0:
     choice = menu()
     print('----------------------------')
+    
     if choice == 1:
         feltoltott = int(input('feltölteni kivánt összeg : '))
         print(f'Elkölthető összeg : {befizetés(feltoltott)} ft' )
