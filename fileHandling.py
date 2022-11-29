@@ -35,7 +35,7 @@ def olvasas():
 
 def loadData():
     fogadasok = []
-    file = open('fogadásaim.csv', 'r+' , encoding='utf8')
+    file = open('fogadásaim.csv', 'r' , encoding='utf8')
     
     for row in file :
    

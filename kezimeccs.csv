@@ -1,43 +1,43 @@
-időpont;bajnokság;hazai;vendég;
-17.11.2022;NB1;Telekom Veszprém;Ferencvárosi TC
-19.11.2022;NB1;Dabas;Balatonfüred
-19.11.2022;NB1;Szeged;Budai Farkasok
-26.11.2022;NB1;Veszprémi KKFT;Tatabánya
-26.11.2022;NB1;Dabas;Budakalász
-26.11.2022;NB1;Ferencvárosi TC;Komló
-26.11.2022;NB1;Gyöngyös;Budai Farkasok
-26.11.2022;NB1;Szeged;NEKA
-26.11.2022;NB1;Telekom Veszprém;Csurgó
-02.12.2022;NB1;Dabas;Cegléd
-02.12.2022;NB1;Tatabánya;Balatonfüred
-03.12.2022;NB1;Budai Farkasok;Szeged
-03.12.2022;NB1;Budakalász;Ferencvárosi TC
-03.12.2022;NB1;Csurgó;Gyöngyös
-03.12.2022;NB1;Komló;Telekom Veszprém
-03.12.2022;NB1;NEKA;Veszprémi KKFT
-09.12.2022;NB1;Gyöngyös;Komló
-10.12.2022;NB1;Veszprémi KKFT;Budai Farkasok
-10.12.2022;NB1;Szeged;Csurgó
-10.12.2022;NB1;Ferencvárosi TC;Cegléd
-10.12.2022;NB1;NEKA;Tatabánya
-10.12.2022;NB1;Telekom Veszprém;Budakalász
-16.12.2022;NB1;Tatabánya;Dabas
-17.12.2022;NB1;Budai Farkasok;NEKA
-17.12.2022;NB1;Cegléd;Telekom Veszprém
-17.12.2022;NB1;Budakalász;Gyöngyös
-17.12.2022;NB1;Komló;Szeged
-17.12.2022;NB1;Veszprémi KKFT;Csurgó
-18.12.2022;NB1;Balatonfüred;Ferencvárosi TC
-03.02.2022;NB1;Cegléd;Szeged
-10.02.2022;NB1;Cegléd;Gyöngyös
-10.02.2022;NB1;Tatabánya;Budai Farkasok
-11.02.2022;NB1;Budakalász;Szeged
-11.02.2022;NB1;Balatonfüred;Telekom Veszprém
-11.02.2022;NB1;Csurgó;NEKA
-11.02.2022;NB1;Dabas;Ferencvárosi TC
-11.02.2022;NB1;Komló;Veszprémi KKFT
-17.02.2022;NB1;Budai Farkasok;Csurgó
-17.02.2022;NB1;Ferencvárosi TC;Tatabánya
-18.02.2022;NB1;Gyöngyös;Balatonfüred
-18.02.2022;NB1;Telekom Veszprém;Dabas
-18.02.2022;NB1;Veszprémi KKFT;Budaka
+időpont;hazai;vendeg;odds;odds2;odds3
+17.11.2022;Telekom Veszprém;Ferencvárosi TC;1.1;1.2;1.3
+19.11.2022;Dabas;Balatonfüred;1.1;1.2;1.3
+19.11.2022;Szeged;Budai Farkasok;1.1;1.2;1.3
+26.11.2022;Veszprémi KKFT;Tatabánya;1.1;1.2;1.3
+26.11.2022;Dabas;Budakalász;1.1;1.2;1.3
+26.11.2022;Ferencvárosi TC;Komló;1.1;1.2;1.3
+26.11.2022;Gyöngyös;Budai Farkasok;1.1;1.2;1.3
+26.11.2022;Szeged;NEKA;1.1;1.2;1.3
+26.11.2022;Telekom Veszprém;Csurgó;1.1;1.2;1.3
+02.12.2022;Dabas;Cegléd;1.1;1.2;1.3
+02.12.2022;Tatabánya;Balatonfüred;1.1;1.2;1.3
+03.12.2022;Budai Farkasok;Szeged;1.1;1.2;1.3
+03.12.2022;Budakalász;Ferencvárosi TC;1.1;1.2;1.3
+03.12.2022;Csurgó;Gyöngyös;1.1;1.2;1.3
+03.12.2022;Komló;Telekom Veszprém;1.1;1.2;1.3
+03.12.2022;NEKA;Veszprémi KKFT;1.1;1.2;1.3
+09.12.2022;Gyöngyös;Komló;1.1;1.2;1.3
+10.12.2022;Veszprémi KKFT;Budai Farkasok;1.1;1.2;1.3
+10.12.2022;Szeged;Csurgó;1.1;1.2;1.3
+10.12.2022;Ferencvárosi TC;Cegléd;1.1;1.2;1.3
+10.12.2022;NEKA;Tatabánya;1.1;1.2;1.3
+10.12.2022;Telekom Veszprém;Budakalász;1.1;1.2;1.3
+16.12.2022;Tatabánya;Dabas;1.1;1.2;1.3
+17.12.2022;Budai Farkasok;NEKA;1.1;1.2;1.3
+17.12.2022;Cegléd;Telekom Veszprém;1.1;1.2;1.3
+17.12.2022;Budakalász;Gyöngyös;1.1;1.2;1.3
+17.12.2022;Komló;Szeged;1.1;1.2;1.3
+17.12.2022;Veszprémi KKFT;Csurgó;1.1;1.2;1.3
+18.12.2022;Balatonfüred;Ferencvárosi TC;1.1;1.2;1.3
+03.02.2022;Cegléd;Szeged;1.1;1.2;1.3
+10.02.2022;Cegléd;Gyöngyös;1.1;1.2;1.3
+10.02.2022;Tatabánya;Budai Farkasok;1.1;1.2;1.3
+11.02.2022;Budakalász;Szeged;1.1;1.2;1.3
+11.02.2022;Balatonfüred;Telekom Veszprém;1.1;1.2;1.3
+11.02.2022;Csurgó;NEKA;1.1;1.2;1.3
+11.02.2022;Dabas;Ferencvárosi TC;1.1;1.2;1.3
+11.02.2022;Komló;Veszprémi KKFT;1.1;1.2;1.3
+17.02.2022;Budai Farkasok;Csurgó;1.1;1.2;1.3
+17.02.2022;Ferencvárosi TC;Tatabánya;1.1;1.2;1.3
+18.02.2022;Gyöngyös;Balatonfüred;1.1;1.2;1.3
+18.02.2022;Telekom Veszprém;Dabas;1.1;1.2;1.3
+18.02.2022;Veszprémi KKFT;Budaka;1.1;1.2;1.3

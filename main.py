@@ -46,28 +46,23 @@ def bejel():
                 print(f'Elkölthető összeg : {befizetés(feltoltott)} ft' )
                 kifizetés(befizetés(feltoltott))
             elif choice == 3:
-                print('A - mai meccsek')
-                print('B - szelvény ajánló')
-                valasztas = input('Kérem válasszon egy opciót ( A vagy B )').upper()
-                print('------------------------------------------------------')
-                if valasztas == 'A':
-                    print('Válasszon sportágat :')
-                    print('1 - Labdarugás')
-                    print('2 - Kézilabda')
-                    print('3 - vizilabda')
-                    print('4 - Kosárlabda')
-                    sportag = input('A választott sportág száma :')
-                    print('-----------------------------------------')
-                    if sportag == '1':
-                        foci(osszesadat,egyenleg)
-                    elif sportag == '2':
-                        pass
-                    elif sportag == '3':
-                        pass
-                    elif sportag == '4':
-                        pass
-                elif valasztas == 'B':
+             
+                print('Válasszon sportágat :')
+                print('1 - Labdarugás')
+                print('2 - Kézilabda')
+                print('3 - vizilabda')
+                print('4 - Kosárlabda')
+                sportag = input('A választott sportág száma :')
+                print('-----------------------------------------')
+                if sportag == '1':
+                    foci(osszesadat,egyenleg)
+                elif sportag == '2':
+                    foci(osszesadat, egyenleg)
+                elif sportag == '3':
                     pass
+                elif sportag == '4':
+                    pass
+                
                 
             elif choice == 4 :
                 print(fogadat)
@@ -100,30 +95,26 @@ while choice != 0:
         print(f'Elkölthető összeg : {befizetés(feltoltott)} ft' )
         kifizetés(befizetés(feltoltott))
     elif choice == 3:
-        print('A - mai meccsek')
-        print('B - szelvény ajánló')
-        valasztas = input('Kérem válasszon egy opciót ( A vagy B )').upper()
-        if valasztas == 'A':
-            print('Válasszon sportágat :')
-            print('1 - Labdarugás')
-            print('2 - Kézilabda')
-            print('3 - vizilabda')
-            print('4 - Kosárlabda')
-            sportag = input('A választott sportág száma :')
-            if sportag == '1':
-                foci(osszesadat)
-            elif sportag == '2':
-                pass
-            elif sportag == '3':
-                pass
-            elif sportag == '4':
-                pass
-            else:
-                print("Rossz érték !")
-        elif valasztas == 'B':
+        
+        
+        print('Válasszon sportágat :')
+        print('1 - Labdarugás')
+        print('2 - Kézilabda')
+        print('3 - vizilabda')
+        print('4 - Kosárlabda')
+        sportag = input('A választott sportág száma :')
+        if sportag == '1':
+            foci(osszesadat)
+        elif sportag == '2':
+            foci(osszesadat,)
+        elif sportag == '3':
+            pass
+        elif sportag == '4':
             pass
         else:
             print("Rossz érték !")
+   
+        
             
     #     uj(nev)
     # elif choice == 4:

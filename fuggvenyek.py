@@ -5,35 +5,33 @@ from fogadas import fogadas
 
 results = olvasas()
 
+egyenleg = 0
+def befizetés(feltoltott, egyenleg):
 
-def befizetés(feltoltott):
-    
-    egyenleg = 0
     
     
+    egyenleguj = feltoltott + egyenleg
     
-    egyenleg = feltoltott
-    
-    return egyenleg
+    return egyenleguj
 
 
         
-def kifizetés(egyenleg):
+def kifizetés(egyenleguj):
     
     
-    if egyenleg == 0:
+    if egyenleguj == 0:
         print('Önnek nincs pénz az egyenlegén , sajnos nem tud mit kivenni .')
-    elif egyenleg > 0:
+    elif egyenleguj > 0:
         kifizetett = int(input('Mennyit szeretne kivenni  : ')) 
         if kifizetett > 0:
-            egyenleg = egyenleg - kifizetett
-            print(f'az ön új egyenlege : {egyenleg} ft')
+            egyenleguj = egyenleguj - kifizetett
+            print(f'az ön új egyenlege : {egyenleguj} ft')
         else: 
             print('ön érvénytelen összeget adott meg !')
-    return egyenleg
+    return egyenleguj
     
-def egyenlegFogadas(tet, egyenleg):
-    egyenleguj = egyenleg - int(tet)
+def egyenlegFogadas(tet, egyenleguj):
+    egyenleguj = egyenleguj - int(tet)
     return egyenleguj
      
 
@@ -78,7 +76,7 @@ def maxOdds(results):
             print(f'{item.date} - {item.hazai} - {item.vendeg} - {item.odds1} - {item.odds2}')
 
     
-def foci(osszesadat,egyenleg):
+def foci(osszesadat,egyenleguj):
     print('1 - meccs keresése')
     print('2 - a nap fogadása')
     print('3 - biztos mix')
@@ -99,14 +97,25 @@ def foci(osszesadat,egyenleg):
             print('x - döntetlen')
             tipp = input('választott kimenet :')
             tet = input('adja meg az összeget :')
-            egyenlegFogadas(tet, kifizetés(egyenleg))
-            print(f'elkölthető {egyenlegFogadas(tet, kifizetés(egyenleg))} ')
+            egyenlegFogadas(tet, kifizetés(egyenleguj))
+            print(f'elkölthető {egyenlegFogadas(tet, kifizetés(egyenleguj))} ')
             
             print('----------------------------------------------')
             searchByName2(results, csapatnev, tipp, tet)
         elif valasztottertek == 2:
             idopont = input('adja meg az idopontot : ')
             idopontkeres(results, idopont)
+            print('tippeljen ')
+            print('1 - hazai')
+            print('2 - vendeg')
+            print('x - döntetlen')
+            tipp = input('választott kimenet :')
+            tet = input('adja meg az összeget :')
+            egyenlegFogadas(tet, kifizetés(egyenleguj))
+            print(f'elkölthető {egyenlegFogadas(tet, kifizetés(egyenleguj))} ')
+            
+            print('----------------------------------------------')
+            searchByName2(results, csapatnev, tipp, tet)
     elif valertek == '3':   
             minOdds(results)
             print('tippeljen ')
