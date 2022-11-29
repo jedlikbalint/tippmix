@@ -15,7 +15,8 @@ def befizetés(feltoltott):
     egyenleg = feltoltott
     
     return egyenleg
-    
+
+
         
 def kifizetés(egyenleg):
     
@@ -31,10 +32,9 @@ def kifizetés(egyenleg):
             print('ön érvénytelen összeget adott meg !')
     return egyenleg
     
-def egyenlegFogadas( tet):
-    egyenleg = befizetés(feltotott)
-    egyenleg = egyenleg - tet
-    return egyenleg
+def egyenlegFogadas(tet, egyenleg):
+    egyenleguj = egyenleg - int(tet)
+    return egyenleguj
      
 
 def searchByName(results, csapatnev):
@@ -42,7 +42,10 @@ def searchByName(results, csapatnev):
         if item.hazai == csapatnev or item.vendeg == csapatnev: 
             print(f'{item.date} - {item.hazai} - {item.vendeg}')
 
-
+def idopontkeres(results, idopont):
+    for item in results:
+        if item.date == idopont:
+            print(f'{item.date} - {item.hazai} - {item.vendeg}')
 
 
 def searchByName2(results, csapatnev, tipp, tet):
@@ -57,13 +60,17 @@ def searchByName2(results, csapatnev, tipp, tet):
         else : 
             print('nincs ilyen csapat')
       
-
+def kombinaltkotes(tet, tipp, kombinalt):
+    file = open('fogadásaim.csv','a',encoding='utf8')
+    file.write( tipp + ';' + tet + ';' + kombinalt + '\n')
+    file.close() 
     
 
 def minOdds(results):
     for item in results:
         if float(item.odds1) < 1.3 or float(item.odds2) < 1.3 :
-            print(f'{item.date} - {item.hazai} - {item.vendeg} - {item.odds1} - {item.odds2}')
+            kombinalt = print(f'{item.date} - {item.hazai} - {item.vendeg} - {item.odds1} - {item.odds2}')
+            return kombinalt
             
 def maxOdds(results):
     for item in results:
@@ -71,7 +78,7 @@ def maxOdds(results):
             print(f'{item.date} - {item.hazai} - {item.vendeg} - {item.odds1} - {item.odds2}')
 
     
-def foci(osszesadat, egyenleg):
+def foci(osszesadat,egyenleg):
     print('1 - meccs keresése')
     print('2 - a nap fogadása')
     print('3 - biztos mix')
@@ -91,12 +98,15 @@ def foci(osszesadat, egyenleg):
             print('2 - vendeg')
             print('x - döntetlen')
             tipp = input('választott kimenet :')
-            tet = int(input('adja meg az összeget :'))
-            egyenlegFogadas(tet)
-            print(f'elkölthető {egyenlegFogadas(tet)}')
+            tet = input('adja meg az összeget :')
+            egyenlegFogadas(tet, kifizetés(egyenleg))
+            print(f'elkölthető {egyenlegFogadas(tet, kifizetés(egyenleg))} ')
             
             print('----------------------------------------------')
             searchByName2(results, csapatnev, tipp, tet)
+        elif valasztottertek == 2:
+            idopont = input('adja meg az idopontot : ')
+            idopontkeres(results, idopont)
     elif valertek == '3':   
             minOdds(results)
             print('tippeljen ')
@@ -104,7 +114,10 @@ def foci(osszesadat, egyenleg):
             print('2 - vendeg')
             print('x - döntetlen')
             tipp = input('választott kimenet :')
-            searchByName2(results, tipp)
+            tet = input('adja meg az összeget :')
+            kombinaltkotes(tet, tipp, minOdds(results))
+            
+            
     elif valertek == '4':
         maxOdds(results)
     
