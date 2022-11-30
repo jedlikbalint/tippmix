@@ -1,8 +1,24 @@
-1;100;2022.11.22;Dánia;Tunézia;1.1;2.6;fabrykevin
-1;100;2022.11.26;Franciaország;Dánia;1.5;4.6;fabrykevin
-x;100;2022.11.22;Mexikó;Lengyelország;1.2;3.4;a
-x;100;2022.11.23;Belgium;Kanada;3.5;1.2;a
-x;100;2022.11.24;Svájc;Kamerun;4.8;1.2;a
-x;100;2022.11.24;Portugália;Ghána;4.4;2.2;a
-x;100;2022.11.26;Franciaország;Dánia;1.5;4.6;a
-x;100;2022.11.27;Japán;Costa Rica;1.6;3.8;a
+2;200;14.12.2022;KSI SE;BVSC-Zugló;1.2;2.4
+;a
+2;200;18.12.2022;Szentes;Vasas;1.2;2.4
+;a
+2;200;20.12.2022;Miskolc;Eger;1.1;2.4
+;a
+2;200;26.01.2022;Vasas;Honvéd;1.1;2.4
+;a
+x;300;05.11.2022;Szolnok;Honvéd;1.8;6.4
+;a
+x;300;12.12.2022;PVSK;Szeged;1.8;4.4
+;a
+x;200;2022.12.01;Katar;Ecuador;1.2;2.2;a
+x;200;2022.12.06;Dánia;Tunézia;1.1;2.6;a
+x;200;2022.12.08;Mexikó;Lengyelország;1.2;3.4;a
+x;200;2022.12.12;Belgium;Kanada;3.5;1.2;a
+x;200;2022.12.15;Svájc;Kamerun;4.8;1.2;a
+x;200;2022.12.11;Uruguay;Dél-Korea;1.2;2.0;a
+x;200;2022.12.01;Katar;Ecuador;1.2;2.2;a
+x;200;2022.12.06;Dánia;Tunézia;1.1;2.6;a
+x;200;2022.12.08;Mexikó;Lengyelország;1.2;3.4;a
+x;200;2022.12.12;Belgium;Kanada;3.5;1.2;a
+x;200;2022.12.15;Svájc;Kamerun;4.8;1.2;a
+x;200;2022.12.11;Uruguay;Dél-Korea;1.2;2.0;a

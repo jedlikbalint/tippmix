@@ -2,7 +2,9 @@ from Result import Result
 # from fogadas import fogadas
 from fuggvenyek import*
 from maifogadas import maifogadas
-
+from Resultkezi import Resultkezi
+from Resultkosar import Resultkosar
+from Resultvizilabda import Resultvizilabda
 
 neveklist = []
 
@@ -31,7 +33,80 @@ def olvasas():
     file.close()
     return results
     
+def olvasaskezi():
+    resultskezi = []
+    file = open('kezimeccs.csv', 'r' , encoding='utf8')
+    elsosor = file.readline()
 
+    for row in file:
+        
+        splitted = row.split(';')
+        
+        
+        res = Resultkezi()
+        res.date = splitted[0]
+        res.hazai = splitted[1]
+        res.vendeg = splitted[2]
+        res.odds1 = splitted[3]
+        res.odds2 = splitted[4]
+        
+        resultskezi.append(res)
+    
+    
+    
+    
+    file.close()
+    return resultskezi
+
+def olvasaskosar():
+    resultskosar = []
+    file = open('kosarlabdameccs.csv', 'r' , encoding='utf8')
+    elsosor = file.readline()
+
+    for row in file:
+        
+        splitted = row.split(';')
+        
+        
+        res = Resultkosar()
+        res.date = splitted[0]
+        res.hazai = splitted[1]
+        res.vendeg = splitted[2]
+        res.odds1 = splitted[3]
+        res.odds2 = splitted[4]
+        
+        resultskosar.append(res)
+    
+    
+    
+    
+    file.close()
+    return resultskosar
+
+def olvasasvizilabda():
+    resultsvizilabda = []
+    file = open('vizilabdameccs.csv', 'r' , encoding='utf8')
+    elsosor = file.readline()
+
+    for row in file:
+        
+        splitted = row.split(';')
+        
+        
+        res = Resultvizilabda()
+        res.date = splitted[0]
+        res.hazai = splitted[1]
+        res.vendeg = splitted[2]
+        res.odds1 = splitted[3]
+        res.odds2 = splitted[4]
+        
+        resultsvizilabda.append(res)
+    
+    
+    
+    
+    file.close()
+    return resultsvizilabda
 
 def loadData(email):
     fogadasok = []

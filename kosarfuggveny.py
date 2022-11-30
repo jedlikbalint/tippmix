@@ -3,7 +3,8 @@ from fileHandling import*
 from fogadas import fogadas
 
 
-results = olvasas()
+resultskosar = olvasaskosar()
+
 egyenleg = 0
 
 def befizetés(feltoltott):
@@ -31,15 +32,15 @@ def egyenlegFogadas(tet):
     egyenleg -= int(tet)
      
 
-def searchByName(results, csapatnev):
-    for item in results:
+def searchByName(resultskosar, csapatnev):
+    for item in resultskosar:
         if item.hazai == csapatnev or item.vendeg == csapatnev: 
             print(f'{item.date} - {item.hazai} - {item.vendeg}')
             
 lista = []
-def idopontkeres(results, idopont):
+def idopontkeres(resultskosar, idopont):
     global lista
-    for item in results:
+    for item in resultskosar:
         if item.date == idopont:
             lista.append(item.date + ';' + item.hazai + ';' + item.vendeg + ';' + item.odds1 + ';' + item.odds2 )
     print(lista)
@@ -53,9 +54,9 @@ def datumfogad( email, tet, tipp):
     file.close()
 
 
-def searchByName2(results, csapatnev, tipp, tet):
+def searchByName2(resultskosar, csapatnev, tipp, tet):
   
-    for item in results:
+    for item in resultskosar:
         if item.hazai == csapatnev or item.vendeg == csapatnev: 
             email = input('add meg az emailcimedet : ')
             file = open('fogadásaim.csv','a',encoding='utf8')
@@ -71,14 +72,14 @@ def kombinaltkotes(tet, tipp, kombinalt):
     file.write( tipp + ';' + tet + ';' + kombinalt + '\n')
     file.close() 
     
-def minoddsprint(results):
-    for item in results:
+def minoddsprint(resultskosar):
+    for item in resultskosar:
         if float(item.odds1) > 3 or float(item.odds2) > 3 :
             print(f'{item.date} - {item.hazai} - {item.vendeg} - {item.odds1} - {item.odds2}')
 
-def minOdds(results,tipp, tet):
+def minOdds(resultskosar,tipp, tet):
     list = []
-    for item in results:
+    for item in resultskosar:
         if float(item.odds1) < 1.3 or float(item.odds2) < 1.3 :
             print(f'{item.date} - {item.hazai} - {item.vendeg} - {item.odds1} - {item.odds2}')
             list.append(item.date + ';' + item.hazai + ';' + item.vendeg + ';' + item.odds1 + ';' + item.odds2 )
@@ -90,14 +91,14 @@ def minOdds(results,tipp, tet):
     file.close() 
             
          
-def maxprinnt(results):
-    for item in results:
+def maxprinnt(resultskosar):
+    for item in resultskosar:
         if float(item.odds1) > 3 or float(item.odds2) > 3 :
             print(f'{item.date} - {item.hazai} - {item.vendeg} - {item.odds1} - {item.odds2}')
    
-def maxOdds(results, tipp, tet):
+def maxOdds(resultskosar, tipp, tet):
     list = []
-    for item in results:
+    for item in resultskosar:
         if float(item.odds1) > 3 or float(item.odds2) > 3 :
             print(f'{item.date} - {item.hazai} - {item.vendeg} - {item.odds1} - {item.odds2}')
             
@@ -111,7 +112,7 @@ def maxOdds(results, tipp, tet):
     
 
     
-def foci(osszesadat):
+def kosar(osszesadat):
     global egyenleg
     global lista
     print('1 - meccs keresése')
@@ -126,7 +127,7 @@ def foci(osszesadat):
         print('--------------------------------------------')
         if valasztottertek == 1:
             csapatnev = input('adja meg a csapat nevét:')
-            searchByName(results, csapatnev)
+            searchByName(resultskosar, csapatnev)
             print('tippeljen ')
             print('1 - hazai')
             print('2 - vendeg')
@@ -137,10 +138,10 @@ def foci(osszesadat):
             print(f'Új egyenleg: {egyenleg}')
             
             print('----------------------------------------------')
-            searchByName2(results, csapatnev, tipp, tet)
+            searchByName2(resultskosar, csapatnev, tipp, tet)
         elif valasztottertek == 2:
             idopont = input('adja meg az idopontot : ')
-            idopontkeres(results, idopont)
+            idopontkeres(resultskosar, idopont)
             print('tippeljen ')
             print('1 - hazai')
             print('2 - vendeg')
@@ -155,17 +156,17 @@ def foci(osszesadat):
             print('----------------------------------------------')
             # searchByName2(results, csapatnev, tipp, tet)
     elif valertek == '2':   
-            minoddsprint(results)
+            minoddsprint(resultskosar)
             tipp = input('választott kimenet :')
             tet = input('adja meg az összeget :')
-            minOdds(results, tipp, tet)
+            minOdds(resultskosar, tipp, tet)
             
             
     elif valertek == '3':
-        maxprinnt(results)
+        maxprinnt(resultskosar)
         tipp = input('választott kimenet :')
         tet = input('adja meg az összeget :')
-        maxOdds(results, tipp, tet)
+        maxOdds(resultskosar, tipp, tet)
     
         
          
@@ -173,7 +174,3 @@ def foci(osszesadat):
             
     else : 
         print('rossz értéket adott meg !!!')
-
-        
-       
-    

@@ -1,42 +1,42 @@
 időpont;bajnokság;hazai;vendég;
-11.11.2022.;NBA;Charlotte Hornets;Indiana Pacers
-12.11.2022.;NBA;Orlando Magic;Minnesota Timberwolves
-13.11.2022.;NBA;Washington Wizards;Oklahoma City Thunder
-14.11.2022.;NBA;Atlanta Hawks;Boston Celtics
-15.11.2022.;NBA;Toronto Raptors;Miami Heat
-16.11.2022.;NBA;Milwaukee Bucks;Cleveland Cavaliers
-17.11.2022.;NBA;New Orleans Pelicans;Chicago Bulls
-23.11.2022.;NBA;Dallas Mavericks;Houston Rockets
-24.11.2022.;NBA;Denver Nuggets;New York Knicks
-25.11.2022.;NBA;Phoenix Suns;Golden State Warriors
-18.12.2022.;NBA;Portland Trail Blazers;Brooklyn Nets
-18.09.2022.;NBA;Sacramento Kings;San Antonio Spurs
-18.08.2022.;NBA;Los Angeles Clippers;Detroit Pistons
-19.12.2022.;NBA;Washington Wizards;Miami Heat
-19.04.2022.;NBA;Cleveland Cavaliers;Charlotte Hornets
-19.03.2022.;NBA;Philadelphia 76ers;Milwaukee Bucks
-19.02.2022.;NBA;Chicago Bulls;Orlando Magic
-19.01.2022.;NBA;Houston Rockets;Indiana Pacers
-19.08.2022.;NBA;Memphis Grizzlies;Oklahoma City Thunder
-19.09.2022.;NBA;Dallas Mavericks;Denver Nuggets
-19.10.2022.;NBA;New Orleans Pelicans;Boston Celtics
-19.11.2021.;NBA;Utah Jazz;Phoenix Suns
-19.11.2023.;NBA;Golden State Warriors;New York Knicks
-19.11.2022.;NBA;Los Angeles Lakers;Detroit Pistons
-20.01.2022.;NBA;Atlanta Hawks;Toronto Raptors
-20.02.2022.;NBA;Indiana Pacers;Orlando Magic
-20.03.2022.;NBA;Philadelphia 76ers;Minnesota Timberwolves
-20.04.2022.;NBA;Portland Trail Blazers;Utah Jazz
-20.05.2022.;NBA;Los Angeles Clippers;San Antonio Spurs
-20.11.2022.;NBA;Phoenix Suns;New York Knicks
-21.01.2022.;NBA;Sacramento Kings;Detroit Pistons
-21.02.2022.;NBA;Washington Wizards;Charlotte Hornets
-21.03.2022.;NBA;Brooklyn Nets;Memphis Grizzlies
-21.04.2022.;NBA;Cleveland Cavaliers;Miami Heat
-21.05.2022.;NBA;Houston Rockets;Golden State Warriors
-21.06.2022.;NBA;Dallas Mavericks;Denver Nuggets
-21.11.2022.;NBA;Los Angeles Lakers;San Antonio Spurs
-22.01.2022.;NBA;Cleveland Cavaliers;Atlanta Hawks
-22.02.2022.;NBA;Indiana Pacers;Orlando Magic
-22.03.2022.;NBA;Chicago Bulls;Boston Celtics
-22.11.2022.;NBA;Milwaukee Bucks;Portland Trail Blazers
+11.11.2022.;Charlotte Hornets;Indiana Pacers;1.3;2.5
+12.11.2022.;Orlando Magic;Minnesota Timberwolves;1.3;2.5
+13.11.2022.;Washington Wizards;Oklahoma City Thunder;1.5;2.3
+14.11.2022.;Atlanta Hawks;Boston Celtics;1.3;2.3
+15.11.2022.;Toronto Raptors;Miami Heat;1.7;2.3
+16.11.2022.;Milwaukee Bucks;Cleveland Cavaliers;1.5;2.3
+17.11.2022.;New Orleans Pelicans;Chicago Bulls;1.3;2.3
+23.11.2022.;Dallas Mavericks;Houston Rockets;1.8;2.3
+24.11.2022.;Denver Nuggets;New York Knicks;1.3;2.3
+25.11.2022.;Phoenix Suns;Golden State Warriors;1.3;2.3
+18.12.2022.;Portland Trail Blazers;Brooklyn Nets;1.3;2.3
+18.09.2022.;Sacramento Kings;San Antonio Spurs;1.5;2.3
+18.08.2022.;Los Angeles Clippers;Detroit Pistons;1.3;2.3
+19.12.2022.;Washington Wizards;Miami Heat;1.3;2.3
+19.04.2022.;Cleveland Cavaliers;Charlotte Hornets;1.3;2.3
+19.03.2022.;Philadelphia 76ers;Milwaukee Bucks;1.3;2.3
+19.02.2022.;Chicago Bulls;Orlando Magic;1.3;2.3
+19.01.2022.;Houston Rockets;Indiana Pacers;1.5;2.3
+19.08.2022.;Memphis Grizzlies;Oklahoma City Thunder;1.5;2.3
+19.09.2022.;Dallas Mavericks;Denver Nuggets;1.5;2.3
+19.10.2022.;New Orleans Pelicans;Boston Celtics;1.1;2.3
+19.11.2021.;Utah Jazz;Phoenix Suns;1.1;2.3
+19.11.2023.;Golden State Warriors;New York Knicks;1.3;8.3
+19.11.2022.;Los Angeles Lakers;Detroit Pistons;1.8;9.3
+20.01.2022.;Atlanta Hawks;Toronto Raptors;1.6;2.3
+20.02.2022.;Indiana Pacers;Orlando Magic;1.1;2.3
+20.03.2022.;Philadelphia 76ers;Minnesota Timberwolves;1.3;3.3
+20.04.2022.;Portland Trail Blazers;Utah Jazz;1.3;2.3
+20.05.2022.;Los Angeles Clippers;San Antonio Spurs;1.3;2.3
+20.11.2022.;Phoenix Suns;New York Knicks;1.3;2.3
+21.01.2022.;Sacramento Kings;Detroit Pistons;1.3;2.3
+21.02.2022.;Washington Wizards;Charlotte Hornets;1.3;2.3
+21.03.2022.;Brooklyn Nets;Memphis Grizzlies;1.3;2.3
+21.04.2022.;Cleveland Cavaliers;Miami Heat;1.3;2.3
+21.05.2022.;Houston Rockets;Golden State Warriors;1.3;2.3
+21.06.2022.;Dallas Mavericks;Denver Nuggets;1.3;2.3
+21.11.2022.;Los Angeles Lakers;San Antonio Spurs;1.3;2.3
+22.01.2022.;Cleveland Cavaliers;Atlanta Hawks;1.3;2.3
+22.02.2022.;Indiana Pacers;Orlando Magic;1.3;2.3
+22.03.2022.;Chicago Bulls;Boston Celtics;1.3;2.3
+22.11.2022.;Milwaukee Bucks;Portland Trail Blazers;1.3;2.3

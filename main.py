@@ -1,7 +1,9 @@
 from menu import*
 from fuggvenyek import*
 from fileHandling import*
-
+from kezifuggveny import*
+from kosarfuggveny import*
+from vizilabdafuggveny import*
 
 osszesadat = olvasas()
 
@@ -54,11 +56,11 @@ def bejel():
                 if sportag == '1':
                     foci(osszesadat)
                 elif sportag == '2':
-                    foci(osszesadat)
+                    kezi(osszesadat)
                 elif sportag == '3':
-                    pass
+                    vizilabda(osszesadat)
                 elif sportag == '4':
-                    pass
+                    kosar(osszesadat)
                 
                 
             elif choice == 4 :
@@ -85,7 +87,6 @@ choice = -1
 while choice != 0:
     choice = menu()
     print('----------------------------')
-    
     if choice == 1:
         feltoltott = int(input('feltölteni kivánt összeg : '))
         print(f'Elkölthető összeg : {befizetés(feltoltott)} ft' )
@@ -104,7 +105,7 @@ while choice != 0:
         if sportag == '1':
             foci(osszesadat)
         elif sportag == '2':
-            foci(osszesadat,)
+            kezi(osszesadat,)
         elif sportag == '3':
             pass
         elif sportag == '4':
