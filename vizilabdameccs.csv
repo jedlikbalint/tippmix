@@ -1,47 +1,47 @@
 időpont;bajnokság;hazai;vendég;
 18.11.2022;OB1;Ferencvárosi TC;KSI SE
-19.11.2022;OB1;Szeged;UVSE
-19.11.2022;OB1;Eger;Vasas
-19.11.2022;OB1;Miskolc;PVSK
-19.11.2022;OB1;Szentes;Kaposvár
-19.11.2022;OB1;Szolnok;Honvéd
-19.11.2022;OB1;BVSC-Zugló;OSC Újbuda
-03.12.2022;OB1;UVSE;Szolnok
-03.12.2022;OB1;Ferencvárosi TC;Miskolc
-03.12.2022;OB1;Vasas;BVSC-Zugló
-03.12.2022;OB1;Kaposvár;Honvéd
-03.12.2022;OB1;OSC Újbuda;Szentes
-03.12.2022;OB1;PVSK;Szeged
-03.12.2022;OB1;Eger;KSI SE
-17.12.2022;OB1;KSI SE;BVSC-Zugló
-17.12.2022;OB1;Szolnok;Kaposvár
-17.12.2022;OB1;UVSE;PVSK
+01.11.2022;OB1;Szeged;UVSE
+02.11.2022;OB1;Eger;Vasas
+03.11.2022;OB1;Miskolc;PVSK
+04.11.2022;OB1;Szentes;Kaposvár
+05.11.2022;OB1;Szolnok;Honvéd
+06.11.2022;OB1;BVSC-Zugló;OSC Újbuda
+07.12.2022;OB1;UVSE;Szolnok
+08.12.2022;OB1;Ferencvárosi TC;Miskolc
+09.12.2022;OB1;Vasas;BVSC-Zugló
+10.12.2022;OB1;Kaposvár;Honvéd
+11.12.2022;OB1;OSC Újbuda;Szentes
+12.12.2022;OB1;PVSK;Szeged
+13.12.2022;OB1;Eger;KSI SE
+14.12.2022;OB1;KSI SE;BVSC-Zugló
+15.12.2022;OB1;Szolnok;Kaposvár
+16.12.2022;OB1;UVSE;PVSK
 17.12.2022;OB1;Szeged;Ferencvárosi TC
-17.12.2022;OB1;Szentes;Vasas
-17.12.2022;OB1;Honvéd;OSC Újbuda
-17.12.2022;OB1;Miskolc;Eger
-14.01.2022;OB1;BVSC-Zugló;Miskolc
-14.01.2022;OB1;Eger;Szeged
-14.01.2022;OB1;Ferencvárosi TC;UVSE
-14.01.2022;OB1;KSI SE;Szentes
-14.01.2022;OB1;Vasas;Honvéd
-14.01.2022;OB1;OSC Újbuda;Kaposvár
-14.01.2022;OB1;PVSK;Szolnok
-18.01.2022;OB1;Eger;Kaposvár
-18.01.2022;OB1;Ferencvárosi TC;OSC Újbuda
-18.01.2022;OB1;KSI SE;UVSE
-18.01.2022;OB1;Szolnok;Szentes
-18.01.2022;OB1;Miskolc;Szeged
-18.01.2022;OB1;BVSC-Zugló;Honvéd
-18.01.2022;OB1;Vasas;PVSK
-21.01.2022;OB1;UVSE;Miskolc
-21.01.2022;OB1;Szeged;Szolnok
-21.01.2022;OB1;Ferencvárosi TC;Vasas
-21.01.2022;OB1;Kaposvár;BVSC-Zugló
-21.01.2022;OB1;Honvéd;Szentes
-21.01.2022;OB1;OSC Újbuda;Eger
-21.01.2022;OB1;PVSK;KSI SE
-01.02.2022;OB1;Kaposvár;Vasas
-01.02.2022;OB1;Szentes;Miskolc
-01.02.2022;OB1;Szolnok;OSC Újbuda
-01.02.2022;OB1;UVSE;Eger
+18.12.2022;OB1;Szentes;Vasas
+19.12.2022;OB1;Honvéd;OSC Újbuda
+20.12.2022;OB1;Miskolc;Eger
+21.01.2022;OB1;BVSC-Zugló;Miskolc
+22.01.2022;OB1;Eger;Szeged
+24.01.2022;OB1;Ferencvárosi TC;UVSE
+25.01.2022;OB1;KSI SE;Szentes
+26.01.2022;OB1;Vasas;Honvéd
+27.01.2022;OB1;OSC Újbuda;Kaposvár
+28.01.2022;OB1;PVSK;Szolnok
+29.01.2022;OB1;Eger;Kaposvár
+30.01.2022;OB1;Ferencvárosi TC;OSC Újbuda
+31.01.2022;OB1;KSI SE;UVSE
+18.02.2022;OB1;Szolnok;Szentes
+18.03.2022;OB1;Miskolc;Szeged
+18.04.2022;OB1;BVSC-Zugló;Honvéd
+18.05.2022;OB1;Vasas;PVSK
+21.06.2022;OB1;UVSE;Miskolc
+21.07.2022;OB1;Szeged;Szolnok
+21.08.2022;OB1;Ferencvárosi TC;Vasas
+21.09.2022;OB1;Kaposvár;BVSC-Zugló
+21.10.2022;OB1;Honvéd;Szentes
+21.11.2022;OB1;OSC Újbuda;Eger
+21.12.2022;OB1;PVSK;KSI SE
+01.02.2023;OB1;Kaposvár;Vasas
+01.02.2021;OB1;Szentes;Miskolc
+01.02.2020;OB1;Szolnok;OSC Újbuda
+01.02.2019;OB1;UVSE;Eger
