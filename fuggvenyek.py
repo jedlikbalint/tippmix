@@ -46,13 +46,11 @@ def searchByName2(results, csapatnev, tipp, tet):
   
     for item in results:
         if item.hazai == csapatnev or item.vendeg == csapatnev: 
-            print(f'{item.date} - {item.hazai} - {item.vendeg}')
+            email = input('add meg az emailcimedet : ')
             file = open('fogadásaim.csv','a',encoding='utf8')
-            file.write( tipp + ';' + str(tet) + ';' + item.date + ';' + item. hazai + ';' + item.vendeg + ';' + item.odds1 + ';' + item.odds2 + '\n')
+            file.write( tipp + ';' + str(tet) + ';' + item.date + ';' + item. hazai + ';' + item.vendeg + ';' + item.odds1 + ';' + item.odds2 + ';' + email + '\n')
             file.close() 
-            return
-        else : 
-            print('nincs ilyen csapat')
+        
       
 def kombinaltkotes(tet, tipp, kombinalt):
     file = open('fogadásaim.csv','a',encoding='utf8')
@@ -63,13 +61,28 @@ def kombinaltkotes(tet, tipp, kombinalt):
 def minOdds(results):
     for item in results:
         if float(item.odds1) < 1.3 or float(item.odds2) < 1.3 :
-            kombinalt = print(f'{item.date} - {item.hazai} - {item.vendeg} - {item.odds1} - {item.odds2}')
-            return kombinalt
+            print(f'{item.date} - {item.hazai} - {item.vendeg} - {item.odds1} - {item.odds2}')
             
-def maxOdds(results):
+         
+def maxprinnt(results):
     for item in results:
         if float(item.odds1) > 3 or float(item.odds2) > 3 :
             print(f'{item.date} - {item.hazai} - {item.vendeg} - {item.odds1} - {item.odds2}')
+   
+def maxOdds(results, tipp, tet):
+    list = []
+    for item in results:
+        if float(item.odds1) > 3 or float(item.odds2) > 3 :
+            print(f'{item.date} - {item.hazai} - {item.vendeg} - {item.odds1} - {item.odds2}')
+            
+            list.append(item.date + ';' + item.hazai + ';' + item.vendeg + ';' + item.odds1 + ';' + item.odds2 )
+    print(list)
+    email = input('add meg az emailcimedet : ')
+    file = open('fogadásaim.csv','a',encoding='utf8')
+    for item in list:
+        file.write(f'{tipp};{str(tet)};{item};{email}\n')
+    file.close() 
+    
 
     
 def foci(osszesadat):
@@ -121,18 +134,18 @@ def foci(osszesadat):
             print('x - döntetlen')
             tipp = input('választott kimenet :')
             tet = input('adja meg az összeget :')
-            kombinaltkotes(tet, tipp, minOdds(results))
+            searchByName2(results, tipp, tet)
             
             
     elif valertek == '4':
-        maxOdds(results)
+        maxprinnt(results)
+        tipp = input('választott kimenet :')
+        tet = input('adja meg az összeget :')
+        maxOdds(results, tipp, tet)
     
-        print('tippeljen ')
-        print('1 - hazai')
-        print('2 - vendeg')
-        print('x - döntetlen')
-        tipp = input('választott kimenet :')  
-        searchByName2(results, tipp)    
+        
+         
+          
             
     else : 
         print('rossz értéket adott meg !!!')

@@ -33,23 +33,27 @@ def olvasas():
     
 
 
-def loadData():
+def loadData(email):
     fogadasok = []
     file = open('fogadásaim.csv', 'r' , encoding='utf8')
     
     for row in file :
+        splitted = row.strip().split(";")
+        if splitted[7] == email:
+            print(row)
+        
    
-        splitted = row.split(';')
+        # splitted = row.split(';')
         
-        fog = maifogadas()
-        fog.kimenet = splitted[0]
-        fog.datum = splitted[1]
-        fog.hazai = splitted[2]
-        fog.vendeg = splitted[3]
-        fog.odds1 = splitted[4]
-        fog.odds2 = splitted[5]
+        # fog = maifogadas()
+        # fog.kimenet = splitted[0]
+        # fog.datum = splitted[1]
+        # fog.hazai = splitted[2]
+        # fog.vendeg = splitted[3]
+        # fog.odds1 = splitted[4]
+        # fog.odds2 = splitted[5]
         
-        fogadasok.append(fog)
+        # fogadasok.append(fog)
     
     
     

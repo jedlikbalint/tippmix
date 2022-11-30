@@ -5,7 +5,7 @@ from fileHandling import*
 
 osszesadat = olvasas()
 
-fogadat = loadData()
+# fogadat = loadData()
 results = olvasas()
 print(' Üdvözlünk')
 
@@ -35,9 +35,7 @@ def bejel():
         while choice != 0:
             choice = menu()
             print('--------------------------------------------------')
-            if choice == 0:
-                file = open('fogadásaim.csv','w',encoding='utf8')
-                file.close()
+            
             if choice == 1:
                 feltoltott = int(input('feltölteni kivánt összeg : '))
                 print(f'Elkölthető összeg : {befizetés(feltoltott)} ft' )
@@ -64,7 +62,8 @@ def bejel():
                 
                 
             elif choice == 4 :
-                print(fogadat)
+                email = input('add meg az emailcimedet : ')
+                print(loadData(email))
     else:
          print('Sikertelen bejelentkezés ! \n')
 while 1: 
