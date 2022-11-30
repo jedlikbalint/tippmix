@@ -4,35 +4,31 @@ from fogadas import fogadas
 
 
 results = olvasas()
-
 egyenleg = 0
-def befizetés(feltoltott, egyenleg):
 
-    
-    
-    egyenleguj = feltoltott + egyenleg
-    
-    return egyenleguj
+def befizetés(feltoltott):
+    global egyenleg
+    egyenleg += feltoltott
 
-
+def egyenlegLekerdezes():
+    return egyenleg
         
-def kifizetés(egyenleguj):
-    
-    
-    if egyenleguj == 0:
+def kifizetés():
+    global egyenleg
+    if egyenleg == 0:
         print('Önnek nincs pénz az egyenlegén , sajnos nem tud mit kivenni .')
-    elif egyenleguj > 0:
+    elif egyenleg > 0:
         kifizetett = int(input('Mennyit szeretne kivenni  : ')) 
-        if kifizetett > 0:
-            egyenleguj = egyenleguj - kifizetett
-            print(f'az ön új egyenlege : {egyenleguj} ft')
+        if kifizetett < egyenleg:
+            egyenleg = egyenleg - kifizetett
+            print(f'az ön új egyenlege : {egyenleg} ft')
         else: 
-            print('ön érvénytelen összeget adott meg !')
-    return egyenleguj
+            print('nincs ennyi az egyenlegén!')
+
     
-def egyenlegFogadas(tet, egyenleguj):
-    egyenleguj = egyenleguj - int(tet)
-    return egyenleguj
+def egyenlegFogadas(tet):
+    global egyenleg
+    egyenleg -= int(tet)
      
 
 def searchByName(results, csapatnev):
@@ -76,7 +72,8 @@ def maxOdds(results):
             print(f'{item.date} - {item.hazai} - {item.vendeg} - {item.odds1} - {item.odds2}')
 
     
-def foci(osszesadat,egyenleguj):
+def foci(osszesadat):
+    global egyenleg
     print('1 - meccs keresése')
     print('2 - a nap fogadása')
     print('3 - biztos mix')
@@ -97,8 +94,8 @@ def foci(osszesadat,egyenleguj):
             print('x - döntetlen')
             tipp = input('választott kimenet :')
             tet = input('adja meg az összeget :')
-            egyenlegFogadas(tet, kifizetés(egyenleguj))
-            print(f'elkölthető {egyenlegFogadas(tet, kifizetés(egyenleguj))} ')
+            egyenlegFogadas(tet)
+            print(f'Új egyenleg: {egyenleg}')
             
             print('----------------------------------------------')
             searchByName2(results, csapatnev, tipp, tet)
@@ -111,8 +108,8 @@ def foci(osszesadat,egyenleguj):
             print('x - döntetlen')
             tipp = input('választott kimenet :')
             tet = input('adja meg az összeget :')
-            egyenlegFogadas(tet, kifizetés(egyenleguj))
-            print(f'elkölthető {egyenlegFogadas(tet, kifizetés(egyenleguj))} ')
+            egyenlegFogadas(tet)
+            print(f'Új egyenleg: {egyenleg}')
             
             print('----------------------------------------------')
             searchByName2(results, csapatnev, tipp, tet)

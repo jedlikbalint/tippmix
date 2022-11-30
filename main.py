@@ -40,11 +40,10 @@ def bejel():
                 file.close()
             if choice == 1:
                 feltoltott = int(input('feltölteni kivánt összeg : '))
-                egyenleg = feltoltott
-                print(f'Elkölthető összeg : {befizetés(feltoltott, egyenleg)} ft' )
+                print(f'Elkölthető összeg : {befizetés(feltoltott)} ft' )
             elif choice == 2:
-                print(f'Elkölthető összeg : {befizetés(feltoltott, egyenleg)} ft' )
-                kifizetés(befizetés(feltoltott, egyenleg))
+                print(f'Elkölthető összeg : {egyenlegLekerdezes()} ft' )
+                kifizetés()
             elif choice == 3:
              
                 print('Válasszon sportágat :')
@@ -55,9 +54,9 @@ def bejel():
                 sportag = input('A választott sportág száma :')
                 print('-----------------------------------------')
                 if sportag == '1':
-                    foci(osszesadat,egyenleg)
+                    foci(osszesadat)
                 elif sportag == '2':
-                    foci(osszesadat, egyenleg)
+                    foci(osszesadat)
                 elif sportag == '3':
                     pass
                 elif sportag == '4':
