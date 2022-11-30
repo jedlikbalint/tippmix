@@ -41,10 +41,10 @@ def bejel():
             if choice == 1:
                 feltoltott = int(input('feltölteni kivánt összeg : '))
                 egyenleg = feltoltott
-                print(f'Elkölthető összeg : {befizetés(feltoltott)} ft' )
+                print(f'Elkölthető összeg : {befizetés(feltoltott, egyenleg)} ft' )
             elif choice == 2:
-                print(f'Elkölthető összeg : {befizetés(feltoltott)} ft' )
-                kifizetés(befizetés(feltoltott))
+                print(f'Elkölthető összeg : {befizetés(feltoltott, egyenleg)} ft' )
+                kifizetés(befizetés(feltoltott, egyenleg))
             elif choice == 3:
              
                 print('Válasszon sportágat :')
